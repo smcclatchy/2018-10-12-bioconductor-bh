@@ -69,8 +69,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   Explain who your audience is.  (In particular, tell readers if the
   workshop is only open to people from a particular institution.
 {% endcomment %}
-This workshop is open to those who have met the prerequisite by either taking a 2-day or workshop or being competent in R. This is open to those
-at the Jackson Laboratory and neighboring institutions.
+This workshop is open to those who have met the prerequisite by taking a 2-day R workshop or otherwise being competent in R.
+The workshop is open to those at the Jackson Laboratory and neighboring institutions.
 {% if page.carpentry == "swc" %}
   {% include sc/who.html %}
 {% elsif page.carpentry == "dc" %}
@@ -209,14 +209,7 @@ at the Jackson Laboratory and neighboring institutions.
   2' to be actual dates or days of the week.
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
-
-{% if page.carpentry == "swc" %}
-  {% include sc/schedule.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/schedule.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/schedule.html %}
-{% endif %}
+{% include sc/schedule.html %}
 
 {% comment %}
   Collaborative Notes
