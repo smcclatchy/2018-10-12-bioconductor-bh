@@ -8,8 +8,8 @@ language: "en"
 latlng: "44.365336,-68.196283"
 humandate: "Oct 12, 2018"
 humantime: "9:00 am - 4:30 pm"
-startdate: 2018-10-12      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2018-10-12        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+startdate: 2018-10-12
+enddate: 2018-10-12    
 instructor: ["Asli Uyar, Dan Gatti, Sue McClatchy"]
 helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["susan.mcclatchy@jax.org"]
