@@ -10,8 +10,8 @@ humandate: "Oct 12, 2018"
 humantime: "9:00 am - 4:30 pm"
 startdate: 2018-10-12
 enddate: 2018-10-12    
-instructor: ["Asli Uyar, Dan Gatti, Sue McClatchy"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+instructor: ["Asli Uyar, Dan Gatti"]
+helper: ["Yuka Takemon, Duy Pham, Sue McClatchy"]   
 email: ["susan.mcclatchy@jax.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite: 49899011286
