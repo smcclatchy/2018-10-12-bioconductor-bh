@@ -369,15 +369,9 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     Open RStudio, then copy and paste the following code into the console:
     </p>
   
-  <pre><code class="keyword">if (!"BiocManager" %in% rownames(installed.packages()))
+  <pre><code>if (!"BiocManager" %in% rownames(installed.packages()))
   install.packages("BiocManager", repos="https://cran.r-project.org")</code></pre>
-
-     ~~~
-    if (!"BiocManager" %in% rownames(installed.packages()))
-    install.packages("BiocManager", repos="https://cran.r-project.org")
-    ~~~
-    {: .r}
-    
+  
     The next step is to install the desired Bioconductor packages.
     The syntax to install the rtracklayer, GenomicRanges, SummarizedExperiment,
     and DESeq2 packages is
