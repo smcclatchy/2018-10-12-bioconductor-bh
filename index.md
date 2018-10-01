@@ -393,9 +393,9 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     <div class="col-md-4">
     <h4>Project organization</h4>
     <ol>
-    <li>Make a new folder in your Desktop called `bioconductor`.</li>
+    <li>Make a new folder in your Desktop called <code>bioconductor</code>.</li>
     <li>Move into this new folder.</li>
-    <li>Create  a `data` folder to hold the data, a `scripts` folder to house your scripts, and a `results` folder to hold results.</li>
+    <li>Create  a <code>data</code> folder to hold the data, a <code>scripts</code> folder to house your scripts, and a <code>results</code> folder to hold results.</li>
     </ol>
     Alternatively, you can use the R console to run the following commands for steps 1-3.
     <pre><code>
@@ -409,7 +409,7 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
         <div class="col-md-4">
         <h4>Data</h4>
         <p>
-        Please download the following large files **before the workshop**, and place them in your `data` folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
+        Please download the following large files <b>before the workshop</b>, and place them in your <code>data</code> folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
         <ul>
         <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Hsapiens.hg38.UCSC.bed">human CPG islands BED file</a> (977 KB)</li>
         <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Mmusculus.mm10.UCSC.bed">mouse CPG islands BED file</a> (502 KB)</li>
