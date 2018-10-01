@@ -368,33 +368,42 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     slightly differently from CRAN packages. The first step is to install the BiocManager package from CRAN.
     Open RStudio, then copy and paste the following code into the console:
     </p>
+    
      ~~~
     if (!"BiocManager" %in% rownames(installed.packages()))
     install.packages("BiocManager", repos="https://cran.r-project.org")
     ~~~
     {: .r}
+    
     The next step is to install the desired Bioconductor packages.
     The syntax to install the rtracklayer, GenomicRanges, SummarizedExperiment,
     and DESeq2 packages is
-     ~~~
+    
+    ~~~
     BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))
     ~~~
     {: .r}
+    
     A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates).
-     ~~~
+    
+    ~~~
     BiocManager::available("TxDb")
     ~~~
     {: .r}
+    
     Use the BiocManager::install() function above to install UCSC known genes for human hg38
     and mouse mm10.
-     ~~~
+    
+    ~~~
     BiocManager::install(c("TxDb.Hsapiens.UCSC.hg38.knownGene", "TxDb.Mmusculus.UCSC.mm10.knownGene"))
     ~~~
     {: .r}
+    
     Bioconductor packages tend to depend on one another quite alot,
     so it is important that the correct versions of all packages are installed.
     Validate your installation with
-     ~~~
+    
+    ~~~
     BiocManager::valid()
     ~~~
     {: .r}
