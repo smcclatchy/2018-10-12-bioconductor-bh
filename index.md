@@ -365,23 +365,23 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     1) software, 2) annotation, 3) experiment data, and 4) workflow.
      Like CRAN (R) packages, Bioconductor packages need to be installed only once per R installation,
     and then attached to each session where they are going to be used. Bioconductor packages are installed
-    slightly differently from CRAN packages. The first step is to install the BiocManager package from CRAN.
+    slightly differently from CRAN packages. The first step is to install the <code>BiocManager</code> package from CRAN.
     Open RStudio, then copy and paste the following code into the console:
     </p>
   
   <pre><code>if (!"BiocManager" %in% rownames(installed.packages()))
   install.packages("BiocManager", repos="https://cran.r-project.org")</code></pre>
   The next step is to install the desired Bioconductor packages.
-    The syntax to install the rtracklayer, GenomicRanges, SummarizedExperiment,
-    and DESeq2 packages is
+    The syntax to install the r<code>tracklayer</code>, <code>GenomicRanges</code>, <code>SummarizedExperiment</code>,
+    and <code>DESeq2</code> packages is
   
   <pre><code>BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))</code></pre>
   
-  A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates).
+  A convenient function in <code>BiocManager</code> is <code>available()</code>, which accepts a regular expression to find matching packages. The following finds all <code>TxDb</code> packages (describing exon, transcript, and gene coordinates).
   
   <pre><code>BiocManager::available("TxDb")</code></pre>
   
-  Use the BiocManager::install() function above to install UCSC known genes for human hg38 and mouse mm10.
+  Use the <code>BiocManager::install()</code> function above to install UCSC known genes for human hg38 and mouse mm10.
   
   <pre><code>BiocManager::install(c("TxDb.Hsapiens.UCSC.hg38.knownGene", "TxDb.Mmusculus.UCSC.mm10.knownGene"))</code></pre>
   
