@@ -368,7 +368,10 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     slightly differently from CRAN packages. The first step is to install the BiocManager package from CRAN.
     Open RStudio, then copy and paste the following code into the console:
     </p>
-    
+  
+  <pre><code class="keyword">if (!"BiocManager" %in% rownames(installed.packages()))
+  install.packages("BiocManager", repos="https://cran.r-project.org")</code></pre>
+
      ~~~
     if (!"BiocManager" %in% rownames(installed.packages()))
     install.packages("BiocManager", repos="https://cran.r-project.org")
