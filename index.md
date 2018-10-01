@@ -368,35 +368,63 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     slightly differently from CRAN packages. The first step is to install the BiocManager package from CRAN.
     Open RStudio, then copy and paste the following code into the console:
     </p>
+     ~~~
     if (!"BiocManager" %in% rownames(installed.packages()))
     install.packages("BiocManager", repos="https://cran.r-project.org")
-
+    ~~~
+    {: .r}
     The next step is to install the desired Bioconductor packages.
     The syntax to install the rtracklayer, GenomicRanges, SummarizedExperiment,
     and DESeq2 packages is
-    
+     ~~~
     BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))
-    
+    ~~~
+    {: .r}
     A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates).
-    
+     ~~~
     BiocManager::available("TxDb")
-    
+    ~~~
+    {: .r}
     Use the BiocManager::install() function above to install UCSC known genes for human hg38
     and mouse mm10.
-    
-    ```{r, biocmanager_txdb, eval=FALSE}
+     ~~~
     BiocManager::install(c("TxDb.Hsapiens.UCSC.hg38.knownGene", "TxDb.Mmusculus.UCSC.mm10.knownGene"))
-    ```
-    
+    ~~~
+    {: .r}
     Bioconductor packages tend to depend on one another quite alot,
     so it is important that the correct versions of all packages are installed.
     Validate your installation with
-    
+     ~~~
     BiocManager::valid()
+    ~~~
+    {: .r}
 </div>
+    <div class="col-md-4">
+    <h4>Project organization</h4>
+    <p>
+    1. Make a new folder in your Desktop called `bioconductor`. Move into this new folder.
+    2. Create  a `data` folder to hold the data, a `scripts` folder to house your scripts, and a `results` folder to hold results.
+    Alternatively, you can use the R console to run the following commands for steps 1 and 2.
+    ~~~
+    setwd("~/Desktop")
+    dir.create("./bioconductor")
+    setwd("~/Desktop/bioconductor")
+    dir.create("./data")
+    dir.create("./scripts")
+    dir.create("./results")
+    ~~~
+    {: .r}
+    </p>
+    </div>
         <div class="col-md-4">
         <h4>Data</h4>
         <p>
+        Please download the following large files **before the workshop**, and place them in your `data` folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
+        - [human CPG islands BED file](https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Hsapiens.hg38.UCSC.bed) (977 KB)
+        - [mouse CPG islands BED file](https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Mmusculus.mm10.UCSC.bed) (502 KB)
+        - [airway experimental data](https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_colData.csv) (941 B)
+        - [airway counts data](https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_counts.csv) (1.32 MB)
     </p>
     </div>
+
 </div> {% comment %} End of 'Bioconductor' section. {% endcomment %}
