@@ -392,10 +392,14 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
 </div>
     <div class="col-md-4">
     <h4>Project organization</h4>
-    1. Make a new folder in your Desktop called `bioconductor`. Move into this new folder.
-    2. Create  a `data` folder to hold the data, a `scripts` folder to house your scripts, and a `results` folder to hold results.
-    Alternatively, you can use the R console to run the following commands for steps 1 and 2.
-    <pre><code>setwd("~/Desktop")
+    <ol>
+    <li>Make a new folder in your Desktop called `bioconductor`.</li>
+    <li>Move into this new folder.</li>
+    <li>Create  a `data` folder to hold the data, a `scripts` folder to house your scripts, and a `results` folder to hold results.</li>
+    </ol>
+    Alternatively, you can use the R console to run the following commands for steps 1-3.
+    <pre><code>
+    setwd("~/Desktop")
     dir.create("./bioconductor")
     setwd("~/Desktop/bioconductor")
     dir.create("./data")
@@ -406,10 +410,12 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
         <h4>Data</h4>
         <p>
         Please download the following large files **before the workshop**, and place them in your `data` folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
-        - <a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Hsapiens.hg38.UCSC.bed">human CPG islands BED file</a> (977 KB)
-        - <a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Mmusculus.mm10.UCSC.bed">mouse CPG islands BED file</a> (502 KB)
-        - <a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_colData.csv">airway experimental data</a> (941 B)
-        - <a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_counts.csv">airway counts data</a> (1.32 MB)
+        <ul>
+        <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Hsapiens.hg38.UCSC.bed">human CPG islands BED file</a> (977 KB)</li>
+        <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Mmusculus.mm10.UCSC.bed">mouse CPG islands BED file</a> (502 KB)</li>
+        <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_colData.csv">airway experimental data</a> (941 B)</li>
+        <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_counts.csv">airway counts data</a> (1.32 MB)</li>
+         </ul>
     </p>
     </div>
 </div> {% comment %} End of 'Bioconductor' section. {% endcomment %}
