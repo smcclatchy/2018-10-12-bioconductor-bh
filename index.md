@@ -371,56 +371,36 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
   
   <pre><code>if (!"BiocManager" %in% rownames(installed.packages()))
   install.packages("BiocManager", repos="https://cran.r-project.org")</code></pre>
-  
-    The next step is to install the desired Bioconductor packages.
+  The next step is to install the desired Bioconductor packages.
     The syntax to install the rtracklayer, GenomicRanges, SummarizedExperiment,
     and DESeq2 packages is
-    
-    ~~~
-    BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))
-    ~~~
-    {: .r}
-    
-    A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates).
-    
-    ~~~
-    BiocManager::available("TxDb")
-    ~~~
-    {: .r}
-    
-    Use the BiocManager::install() function above to install UCSC known genes for human hg38
-    and mouse mm10.
-    
-    ~~~
-    BiocManager::install(c("TxDb.Hsapiens.UCSC.hg38.knownGene", "TxDb.Mmusculus.UCSC.mm10.knownGene"))
-    ~~~
-    {: .r}
-    
-    Bioconductor packages tend to depend on one another quite alot,
+  
+  <pre><code>BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))</code></pre>
+  
+  A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates).
+  
+  <pre><code>BiocManager::available("TxDb")</code></pre>
+  
+  Use the BiocManager::install() function above to install UCSC known genes for human hg38 and mouse mm10.
+  
+  <pre><code>BiocManager::install(c("TxDb.Hsapiens.UCSC.hg38.knownGene", "TxDb.Mmusculus.UCSC.mm10.knownGene"))</code></pre>
+  
+  Bioconductor packages tend to depend on one another quite alot,
     so it is important that the correct versions of all packages are installed.
     Validate your installation with
-    
-    ~~~
-    BiocManager::valid()
-    ~~~
-    {: .r}
+    <pre><code>BiocManager::valid()</code></pre>
 </div>
     <div class="col-md-4">
     <h4>Project organization</h4>
-    <p>
     1. Make a new folder in your Desktop called `bioconductor`. Move into this new folder.
     2. Create  a `data` folder to hold the data, a `scripts` folder to house your scripts, and a `results` folder to hold results.
     Alternatively, you can use the R console to run the following commands for steps 1 and 2.
-    ~~~
-    setwd("~/Desktop")
+    <pre><code>setwd("~/Desktop")
     dir.create("./bioconductor")
     setwd("~/Desktop/bioconductor")
     dir.create("./data")
     dir.create("./scripts")
-    dir.create("./results")
-    ~~~
-    {: .r}
-    </p>
+    dir.create("./results")</code></pre>
     </div>
         <div class="col-md-4">
         <h4>Data</h4>
@@ -432,5 +412,4 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
         - [airway counts data](https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/airway_counts.csv) (1.32 MB)
     </p>
     </div>
-
 </div> {% comment %} End of 'Bioconductor' section. {% endcomment %}
