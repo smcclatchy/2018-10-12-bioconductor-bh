@@ -13,7 +13,7 @@ enddate: 2018-10-12
 instructor: ["Asli Uyar, Dan Gatti"]
 helper: ["Yuka Takemon, Duy Pham, Sue McClatchy"]   
 email: ["susan.mcclatchy@jax.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
+collaborative_notes: https://pad.carpentries.org/2018-10-12-bioconductor-bh
 eventbrite: 49899011286
 ---
 
@@ -363,41 +363,23 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     Packages available in Bioconductor are summarized at https://bioconductor.org/packages.
     The widget on the left summarizes four distinct types of Bioconductor packages:
     1) software, 2) annotation, 3) experiment data, and 4) workflow.
-    </p>
-    <h4>Installation</h4>
-     <p>
      Like CRAN (R) packages, Bioconductor packages need to be installed only once per R installation,
     and then attached to each session where they are going to be used. Bioconductor packages are installed
     slightly differently from CRAN packages. The first step is to install the BiocManager package from CRAN.
     Open RStudio, then copy and paste the following code into the console:
     </p>
-    
-    ```{r, biocmanager, eval=FALSE}
     if (!"BiocManager" %in% rownames(installed.packages()))
     install.packages("BiocManager", repos="https://cran.r-project.org")
-    ```
 
     The next step is to install the desired Bioconductor packages.
     The syntax to install the rtracklayer, GenomicRanges, SummarizedExperiment,
     and DESeq2 packages is
     
-    ```{r, biocmanager_install, eval=FALSE}
     BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))
-    ```
     
-    Bioconductor packages tend to depend on one another quite alot,
-    so it is important that the correct versions of all packages are installed.
-    Validate your installation with
+    A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates).
     
-    ```{r, biocmanager_valid, eval=FALSE}
-    BiocManager::valid()
-    ```
-
-    A convenient function in BiocManager is available(), which accepts a regular expression to find matching packages. The following finds all ‘TxDb’ packages (describing exon, transcript, and gene coordinates) for Homo sapiens.
-    
-    ```{r, biocmanager_available, eval=FALSE}
-    BiocManager::available("TxDb.Hsapiens")
-    ```
+    BiocManager::available("TxDb")
     
     Use the BiocManager::install() function above to install UCSC known genes for human hg38
     and mouse mm10.
@@ -406,27 +388,15 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     BiocManager::install(c("TxDb.Hsapiens.UCSC.hg38.knownGene", "TxDb.Mmusculus.UCSC.mm10.knownGene"))
     ```
     
-        </div>
+    Bioconductor packages tend to depend on one another quite alot,
+    so it is important that the correct versions of all packages are installed.
+    Validate your installation with
+    
+    BiocManager::valid()
+</div>
         <div class="col-md-4">
         <h4>Data</h4>
         <p>
-    Install R by downloading and running
-    <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-    from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-    Also, please install the
-    <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
     </p>
-    </div>
-    <div class="col-md-4">
-    <h4 id="r-linux">Linux</h4>
-    <p>
-    You can download the binary files for your distribution
-    from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
-    you can use your package manager (e.g. for Debian/Ubuntu
-    run <code>sudo apt-get install r-base</code> and for Fedora run
-    <code>sudo dnf install R</code>).  Also, please install the
-    <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-    </p>
-    </div>
     </div>
 </div> {% comment %} End of 'Bioconductor' section. {% endcomment %}
