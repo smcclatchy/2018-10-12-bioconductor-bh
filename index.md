@@ -10,8 +10,8 @@ humandate: "Oct 12, 2018"
 humantime: "9:00 am - 4:30 pm"
 startdate: 2018-10-12
 enddate: 2018-10-12    
-instructor: ["Asli Uyar, Dan Gatti"]
-helper: ["Yuka Takemon, Duy Pham, Sue McClatchy"]   
+instructor: ["Sue McClatchy, Asli Uyar, Dan Gatti"]
+helper: ["Yuka Takemon, Duy Pham"]
 email: ["susan.mcclatchy@jax.org"]
 collaborative_notes: https://pad.carpentries.org/2018-10-12-bioconductor-bh
 eventbrite: 49899011286
@@ -71,13 +71,7 @@ eventbrite: 49899011286
 {% endcomment %}
 This workshop is open to those who have met the prerequisite by taking a 2-day R workshop or otherwise being competent in R.
 The workshop is open to those at the Jackson Laboratory and neighboring institutions.
-{% if page.carpentry == "swc" %}
-  {% include sc/who.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/who.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/who.html %}
-{% endif %}
+
 
 {% comment %}
   LOCATION
@@ -187,17 +181,8 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
-{% if site.carpentry == "swc" %} 
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% elsif site.carpentry == "dc" %}
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% elsif site.carpentry == "lc" %}
-<p><a href="{{ site.lc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.lc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% endif %}
-
+<p><a href="https://www.surveymonkey.com/r/8CZHFDF">Pre-workshop Survey</a></p>
+<p><a href="https://www.surveymonkey.com/r/8JN5DK9">Post-workshop Survey</a></p>
 <hr/>
 
 
@@ -248,13 +233,14 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
 
-{% if page.carpentry == "swc" %}
-  {% include sc/syllabus.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/syllabus.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/syllabus.html %}
-{% endif %}
+1. Find, install, and learn how to use Bioconductor packages
+2. Import and manipulate genomic files and Bioconductor data objects
+3. Visually assess quality of RNA-seq data
+4. Perform basic differential analysis of RNA-seq data
+5. Understand how to apply the GenomicRanges infrastructure to real-world problems
+6. Gain insight into the design principles of the GenomicRanges infrastructure and how it was meant to be used
+7. Learn about various annotation package and public data resources
+<a href="https://bioconductor.github.io/BiocWorkshops/">Reference...</a>
 
 <hr/>
 
@@ -372,7 +358,7 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
   <pre><code>if (!"BiocManager" %in% rownames(installed.packages()))
   install.packages("BiocManager", repos="https://cran.r-project.org")</code></pre>
   The next step is to install the desired Bioconductor packages.
-    The syntax to install the r<code>tracklayer</code>, <code>GenomicRanges</code>, <code>SummarizedExperiment</code>,
+    The syntax to install the <code>rtracklayer</code>, <code>GenomicRanges</code>, <code>SummarizedExperiment</code>,
     and <code>DESeq2</code> packages is
   
   <pre><code>BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))</code></pre>
