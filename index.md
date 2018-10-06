@@ -240,7 +240,7 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
 5. Understand how to apply the GenomicRanges infrastructure to real-world problems
 6. Gain insight into the design principles of the GenomicRanges infrastructure and how it was meant to be used
 7. Learn about various annotation package and public data resources
-<a href="https://bioconductor.github.io/BiocWorkshops/">Reference...</a>
+<p><a href="https://bioconductor.github.io/BiocWorkshops/">Reference...</a></p>
 
 <hr/>
 
@@ -358,10 +358,9 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
   <pre><code>if (!"BiocManager" %in% rownames(installed.packages()))
   install.packages("BiocManager", repos="https://cran.r-project.org")</code></pre>
   The next step is to install the desired Bioconductor packages.
-    The syntax to install the <code>rtracklayer</code>, <code>GenomicRanges</code>, <code>SummarizedExperiment</code>,
-    and <code>DESeq2</code> packages is
+    The syntax to install the packages is
   
-  <pre><code>BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2"))</code></pre>
+  <pre><code>BiocManager::install(c("rtracklayer", "GenomicRanges", "SummarizedExperiment", "DESeq2", "tximport", "tximportData", "airway", "apeglm", "AnnotationHub", "ReportingTools", "Glimma", "splatter", "zinbwave"))</code></pre>
   
   A convenient function in <code>BiocManager</code> is <code>available()</code>, which accepts a regular expression to find matching packages. The following finds all <code>TxDb</code> packages (describing exon, transcript, and gene coordinates).
   
@@ -375,6 +374,11 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
     so it is important that the correct versions of all packages are installed.
     Validate your installation with
     <pre><code>BiocManager::valid()</code></pre>
+    In addition to the Bioconductor packages named above, we'll use some of the
+    R packages from <code>tidyverse</code>. Run the following code in the console,
+    or install packages from the RStudio Packages tab.
+    <pre><code>install.packages("tidyverse")</code></pre>
+
 </div>
     <div class="col-md-4">
     <h4>Project organization</h4>
@@ -395,7 +399,7 @@ The workshop is open to those at the Jackson Laboratory and neighboring institut
         <div class="col-md-4">
         <h4>Data</h4>
         <p>
-        Please download the following large files <b>before the workshop</b>, and place them in your <code>data</code> folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
+        Please download the following large files <b>before the workshop</b>, and place them in your <code>data</code> folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of file.
         <ul>
         <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Hsapiens.hg38.UCSC.bed">human CPG islands BED file</a> (977 KB)</li>
         <li><a href="https://raw.githubusercontent.com/smcclatchy/2018-10-12-bioconductor-bh/gh-pages/data/100_Morgan_RBiocForAll/CpGislands.Mmusculus.mm10.UCSC.bed">mouse CPG islands BED file</a> (502 KB)</li>
